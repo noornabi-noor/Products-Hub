@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white min-h-[80vh] flex items-center">
+    <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white min-h-[80vh] flex items-center rounded-2xl">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/30"></div>
 
@@ -38,17 +38,17 @@ export default function Hero() {
 
         {/* Right side (Image / Illustration) */}
         <motion.img
-      src="https://i.ibb.co.com/yB6fGmSP/cart.jpg"
-      alt="Shopping Illustration"
-      className="w-80 md:w-[420px] drop-shadow-2xl rounded-2xl"
-      animate={{ y: [0, -20, 0] }}   // floating effect
-      transition={{
-        duration: 3,
-        repeat: Infinity,
-        repeatType: "loop",
-        ease: "easeInOut",
-      }}
-    />
+          src="https://i.ibb.co.com/yB6fGmSP/cart.jpg"
+          alt="Shopping Illustration"
+          className="w-80 md:w-[420px] drop-shadow-2xl rounded-2xl"
+          animate={{ y: [0, -20, 0] }} // floating effect
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+          }}
+        />
       </div>
     </section>
   );

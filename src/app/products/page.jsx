@@ -21,9 +21,9 @@ export default function ProductsPage() {
     text.length > length ? text.slice(0, length) + "..." : text;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-6">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-400 py-12 px-6">
       <motion.h1
-        className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12"
+        className="text-4xl md:text-5xl font-bold text-center text-white mb-12"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -32,28 +32,28 @@ export default function ProductsPage() {
       </motion.h1>
 
       {products.length === 0 ? (
-        <p className="text-center text-gray-600">No products available yet.</p>
+        <p className="text-center text-white/90">No products available yet.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 max-w-7xl mx-auto">
           {products.map((product, index) => (
             <motion.div
               key={product._id}
-              className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl transition"
+              className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center backdrop-blur-sm hover:shadow-2xl transition"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <img
-                src={product.img}
-                alt={product.name}
-                className="w-40 h-40 object-contain rounded-xl mb-4"
-              />
+              <div className="w-40 h-40 mb-4 flex items-center justify-center bg-purple-100 rounded-xl overflow-hidden">
+                <img
+                  src={product.img}
+                  alt={product.name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <h2 className="text-lg font-semibold text-gray-800 mb-2">
                 {product.name}
               </h2>
-              <p className="text-gray-600 mb-4">
-                {truncate(product.description)}
-              </p>
+              <p className="text-gray-700 mb-4 text-center">{truncate(product.description)}</p>
               <p className="text-yellow-500 font-bold mb-4">
                 ${product.price.toFixed(2)}
               </p>
