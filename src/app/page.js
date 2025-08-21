@@ -1,7 +1,8 @@
 import Image from "next/image";
+import ProductsSection from "./components/ProductsSection";
 
 export default function Home() {
   return (
-    <h1>Hi kkkkkkkkk</h1>
+    <ProductsSection/>
   );
 }
