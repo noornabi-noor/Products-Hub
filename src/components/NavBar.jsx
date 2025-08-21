@@ -14,10 +14,13 @@ const NavBar = () => {
         </li>
       )} */}
       <li>
-        <Link href={"/"} to="/about">About Us</Link>
+        <Link href={"/about"} >About Us</Link>
       </li>
       <li>
-        <Link href={"/"} to="/contact">Contact</Link>
+        <Link href={"/contact"} >Contact</Link>
+      </li>
+      <li>
+        <Link href={"/add-product"} >AddProduct</Link>
       </li>
       <li>
         <a

@@ -24,7 +24,7 @@ export default async function ProductsSection() {
             </div>
 
             <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-            <p className="text-gray-600 mb-4">{product.description}</p>
+            <p className="text-gray-600 mb-4 truncate">{product.description}</p>
             <div className="flex justify-between items-center">
               <span className="font-bold text-lg">${product.price}</span>
               <Link
