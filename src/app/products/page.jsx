@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function ProductsPage() {
   const [products, setProducts] = useState([]);
@@ -53,16 +54,18 @@ export default function ProductsPage() {
               <h2 className="text-lg font-semibold text-gray-800 mb-2">
                 {product.name}
               </h2>
-              <p className="text-gray-700 mb-4 text-center">{truncate(product.description)}</p>
+              <p className="text-gray-700 mb-4 text-center">
+                {truncate(product.description)}
+              </p>
               <p className="text-yellow-500 font-bold mb-4">
                 ${product.price.toFixed(2)}
               </p>
-              <a
+              <Link
                 href={`/products/${product._id}`}
                 className="px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition"
               >
                 Details
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

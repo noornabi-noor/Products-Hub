@@ -20,6 +20,37 @@ export default function ProductDetailsPage() {
     fetchProduct();
   }, [id]);
 
+  const handleAddToCart = async () => {
+    if (!session?.user) {
+      alert("Please log in to add items to your cart.");
+      router.push("/login"); // Or your auth page
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userId: session.user.id, 
+          productId: product._id,
+          quantity: 1,
+        }),
+      });
+
+      if (res.ok) {
+        alert("Product added to cart!");
+      } else {
+        alert("Failed to add product to cart.");
+      }
+    } catch (err) {
+      console.error("Cart error:", err);
+      alert("Something went wrong.");
+    }
+  };
+
   if (!product) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -29,7 +60,7 @@ export default function ProductDetailsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-6">
+    <div className="min-h-screen bg-gray-50 py-12 px-6 mt-7">
       <motion.div
         className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8"
         initial={{ opacity: 0, y: 50 }}
@@ -47,8 +78,10 @@ export default function ProductDetailsPage() {
         <div className="flex-1 flex flex-col gap-4">
           <h1 className="text-3xl font-bold text-gray-900">{product.name}</h1>
           <p className="text-gray-600">{product.description}</p>
-          <p className="text-yellow-500 text-2xl font-semibold">${product.price.toFixed(2)}</p>
-          
+          <p className="text-yellow-500 text-2xl font-semibold">
+            ${product.price.toFixed(2)}
+          </p>
+
           <div className="flex gap-4 mt-4">
             <button
               onClick={() => router.back()}
@@ -56,11 +89,18 @@ export default function ProductDetailsPage() {
             >
               ← Back
             </button>
-            <button
+            {/* <button
               className="px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition"
             >
               🛒 Add to Cart
-            </button>
+            </button> */}
+
+            {/* <button
+              onClick={handleAddToCart}
+              className="px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition"
+            >
+              🛒 Add to Cart
+            </button> */}
           </div>
         </div>
       </motion.div>
