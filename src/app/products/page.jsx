@@ -21,7 +21,7 @@ export default function ProductsPage() {
     text.length > length ? text.slice(0, length) + "..." : text;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-400 py-12 px-6">
+    <div className="mt-7 min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-400 py-12 px-6">
       <motion.h1
         className="text-4xl md:text-5xl font-bold text-center text-white mb-12"
         initial={{ opacity: 0, y: -30 }}

@@ -9,7 +9,7 @@ export default function LoginPage() {
 
       <button
         onClick={() => signIn("google")}
-        className="bg-red-500 text-white px-4 py-2 rounded"
+        className="bg-red-500 text-white px-4 py-2 rounded cursor-pointer"
       >
         Login with Google
       </button>

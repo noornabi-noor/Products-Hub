@@ -26,26 +26,16 @@ const NavBar = () => {
         <Link href={"/about"}>About Us</Link>
       </li>
       <li>
-        <Link href={"/contact"}>Contact</Link>
+        <Link href={"/products"}>All Products</Link>
       </li>
       <li>
         <Link href={"/add-product"}>Add Product</Link>
-      </li>
-      <li>
-        <a
-          href="https://github.com/noornabi-noor"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-indigo-500 border border-indigo-500 px-3 py-1 rounded hover:bg-indigo-50 dark:hover:bg-indigo-900 transition"
-        >
-          Join as Developer
-        </a>
       </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-gradient-to-br from-indigo-200 via-purple-300 to-pink-200 shadow-sm sticky top-0 z-50">
       <div className="navbar-start">
         <Link className="btn btn-ghost text-xl" href={"/"}>
           <ProductsHubLogo />
@@ -59,14 +49,14 @@ const NavBar = () => {
       <div className="navbar-end">
         {!session ? (
           <button
-            className="btn"
+            className="px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition cursor-pointer"
             onClick={() => signIn("credentials", { callbackUrl: "/products" })}
           >
             Login
           </button>
         ) : (
           <button
-            className="btn"
+            className="px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition cursor-pointer"
             onClick={() => {
               signOut({ callbackUrl: "/" });
               toast.success("Logged out ✅");

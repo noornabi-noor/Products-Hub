@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white min-h-[80vh] flex items-center rounded-2xl">
+    <section className="mt-7 relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white min-h-[80vh] flex items-center rounded-2xl">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/30"></div>
 

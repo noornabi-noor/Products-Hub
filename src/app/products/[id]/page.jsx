@@ -52,7 +52,7 @@ export default function ProductDetailsPage() {
           <div className="flex gap-4 mt-4">
             <button
               onClick={() => router.back()}
-              className="px-4 py-2 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition"
+              className="px-4 py-2 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition cursor-pointer"
             >
               ← Back
             </button>

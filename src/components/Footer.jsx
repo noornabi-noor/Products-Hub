@@ -5,13 +5,13 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-200 py-12 mt-5">
+    <footer className="bg-gradient-to-br from-indigo-400 via-black-400 to-pink-200 text-gray-800 py-12 mt-7">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* Company Info */}
         <div>
-          <h3 className="text-xl font-bold mb-4 text-white">Nebula Shop</h3>
-          <p className="text-gray-400">
+          <h3 className="text-xl font-bold mb-4 text-white">Products Hub</h3>
+          <p className="text-gray-800">
             Providing top-quality products for your lifestyle. Explore our products and enjoy a seamless shopping experience.
           </p>
         </div>
@@ -31,17 +31,17 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-semibold mb-4 text-white">Follow Us</h4>
           <div className="flex space-x-4">
-            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-yellow-400 text-white hover:text-gray-900 transition"><FaFacebookF /></a>
-            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-yellow-400 text-white hover:text-gray-900 transition"><FaTwitter /></a>
-            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-yellow-400 text-white hover:text-gray-900 transition"><FaInstagram /></a>
-            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-yellow-400 text-white hover:text-gray-900 transition"><FaLinkedinIn /></a>
+            <a href="https://www.facebook.com/md.noornabi.noor.2024" className="p-2 bg-gray-800 rounded-full hover:bg-yellow-400 text-white hover:text-gray-900 transition"><FaFacebookF /></a>
+            <a href="https://x.com/i/flow/login?lang=en" className="p-2 bg-gray-800 rounded-full hover:bg-yellow-400 text-white hover:text-gray-900 transition"><FaTwitter /></a>
+            <a href="https://www.instagram.com/noornabi1770/" className="p-2 bg-gray-800 rounded-full hover:bg-yellow-400 text-white hover:text-gray-900 transition"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/md-noornabi-bb41442b3/" className="p-2 bg-gray-800 rounded-full hover:bg-yellow-400 text-white hover:text-gray-900 transition"><FaLinkedinIn /></a>
           </div>
         </div>
 
         {/* Newsletter */}
         <div>
           <h4 className="text-lg font-semibold mb-4 text-white">Newsletter</h4>
-          <p className="text-gray-400 mb-4">Subscribe to get our latest products and offers.</p>
+          <p className="text-gray-800 mb-4">Subscribe to get our latest products and offers.</p>
           <form className="flex flex-col sm:flex-row gap-2">
             <input
               type="email"
