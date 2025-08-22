@@ -1,50 +1,3 @@
-// // src/components/ProductForm.jsx
-// "use client";
-
-// import { useState } from "react";
-
-// export default function ProductForm() {
-//   const [form, setForm] = useState({
-//     name: "",
-//     img: "",
-//     description: "",
-//     price: "",
-//   });
-
-//   const handleChange = (e) => {
-//     setForm({ ...form, [e.target.name]: e.target.value });
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const res = await fetch("/api/products", {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(form),
-//     });
-
-//     if (res.ok) {
-//       alert("✅ Product added!");
-//       setForm({ name: "", img: "", description: "", price: "" });
-//     } else {
-//       alert("❌ Failed to add product");
-//     }
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 space-y-4">
-//       <input name="name" value={form.name} onChange={handleChange} placeholder="Name" required className="input" />
-//       <input name="img" value={form.img} onChange={handleChange} placeholder="Image URL" required className="input" />
-//       <textarea name="description" value={form.description} onChange={handleChange} placeholder="Description" required className="input" />
-//       <input name="price" value={form.price} onChange={handleChange} placeholder="Price" required className="input" />
-//       <button type="submit" className="btn">Add Product</button>
-//     </form>
-//   );
-// }
-
-
-
-
 // src/components/ProductForm.jsx
 "use client";
 
@@ -79,7 +32,7 @@ export default function ProductForm() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-4">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-indigo-300 to-pink-200 p-4">
       <div className="w-full max-w-lg bg-white shadow-xl rounded-2xl p-8 border border-gray-200">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Add a New Product
