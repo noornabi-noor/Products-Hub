@@ -61,7 +61,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500">
-        &copy; {new Date().getFullYear()} Nebula Shop. All rights reserved.
+        &copy; {new Date().getFullYear()} Products Hub. All rights reserved.
       </div>
     </footer>
   );
